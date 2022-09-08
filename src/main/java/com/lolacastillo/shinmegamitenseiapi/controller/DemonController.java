@@ -3,21 +3,17 @@ package com.lolacastillo.shinmegamitenseiapi.controller;
 import com.lolacastillo.shinmegamitenseiapi.data.Ability;
 import com.lolacastillo.shinmegamitenseiapi.data.Demon;
 import com.lolacastillo.shinmegamitenseiapi.data.Stats;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(value ="/api/demons", headers = "Accept=application/json")
+@RequestMapping(value ="/api/demons", produces = "application/json")
 public class DemonController {
-    @GetMapping
+    List<Demon> demons = new ArrayList<>();
+//    @GetMapping("/")
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<Demon> getAll() {
-        List<Demon> demons = new ArrayList<>();
-
         List<Ability> werecat = new ArrayList<Ability>();
         List<Ability> jaki = new ArrayList<Ability>();
 
