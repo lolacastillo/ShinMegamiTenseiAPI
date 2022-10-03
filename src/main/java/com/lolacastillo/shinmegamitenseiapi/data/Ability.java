@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 public class Ability {
     private String name;
-    private int mpComsuption;
+    private int mpConsumption;
 
 
 }
