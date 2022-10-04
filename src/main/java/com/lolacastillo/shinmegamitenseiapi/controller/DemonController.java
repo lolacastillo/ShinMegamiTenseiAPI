@@ -1,8 +1,6 @@
 package com.lolacastillo.shinmegamitenseiapi.controller;
 
-import com.lolacastillo.shinmegamitenseiapi.data.Ability;
 import com.lolacastillo.shinmegamitenseiapi.data.Demon;
-import com.lolacastillo.shinmegamitenseiapi.data.Stats;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
